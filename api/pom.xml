@@ -3,14 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.openmrs.module</groupId>
-		<artifactId>appointments</artifactId>
+		<artifactId>demo</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>appointments-api</artifactId>
+	<artifactId>demo-api</artifactId>
 	<packaging>jar</packaging>
-	<name>appointments API</name>
-	<description>API project for Bahmni Appointment Scheduling</description>
+	<name>demo API</name>
+	<description>API project for Bahmni demo</description>
 
 	<dependencies>
 		<!-- Begin OpenMRS core -->
