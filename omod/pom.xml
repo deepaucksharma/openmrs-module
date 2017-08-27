@@ -3,13 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.openmrs.module</groupId>
-		<artifactId>appointments</artifactId>
+		<artifactId>demo</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>demo-omod</artifactId>
 	<packaging>jar</packaging>
-	<name>appointments OMOD</name>
+	<name>demo OMOD</name>
 	<description>OpenMRS module project for Bahmni demo</description>
 
 	<properties>
@@ -17,7 +17,7 @@
 		<MODULE_NAME>${project.name}</MODULE_NAME>
 		<MODULE_VERSION>${project.version}</MODULE_VERSION>
 		<MODULE_PACKAGE>${project.groupId}.${MODULE_ID}</MODULE_PACKAGE>
-		<openmrs.platform.version>2.1.1-SNAPSHOT</openmrs.platform.version>
+		<openmrs.platform.version>2.1.0</openmrs.platform.version>
 	</properties>
 
 	<dependencies>

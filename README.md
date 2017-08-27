@@ -1,8 +1,8 @@
-openmrs-module-appointments
+openmrs-module-demo
 ==========================
 
 
 Description
 -----------
-Module for scheduling and managing appointments.
+Module for demo.
 
