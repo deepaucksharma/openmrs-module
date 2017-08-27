@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.openmrs.module</groupId>
 	<artifactId>demo</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name> demo module</name>
-	<description>demo module.</description>
+	<name>Bahmni  demo</name>
+	<description>OpenMRS Module Scheduling and managing demo.</description>
 
 	<modules>
 		<module>api</module>
@@ -15,7 +15,7 @@
 	</modules>
 
 	<properties>
-		<openmrs.platform.version>2.1.0</openmrs.platform.version>
+		<openmrs.platform.version>2.1.1-SNAPSHOT</openmrs.platform.version>
 		<!--test dependencies-->
 		<junitVersion>4.12</junitVersion>
 		<powerMockVersion>1.6.5</powerMockVersion>
@@ -155,6 +155,14 @@
 			</dependency>
 
 			<dependency>
+				<groupId>org.openmrs.web</groupId>
+				<artifactId>openmrs-web</artifactId>
+				<version>${openmrs.platform.version}</version>
+				<type>test-jar</type>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>${junitVersion}</version>
@@ -184,14 +192,31 @@
 				</exclusions>
 				<scope>test</scope>
 			</dependency>
-
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>2.3.1</version>
+				<scope>test</scope>
+			</dependency>
 			<dependency>
 				<groupId>org.mockito</groupId>
 				<artifactId>mockito-core</artifactId>
 				<version>${mockitoVersion}</version>
 				<scope>test</scope>
 			</dependency>
-
+			<dependency>
+				<groupId>org.openmrs.api</groupId>
+				<artifactId>openmrs-api</artifactId>
+				<version>${openmrs.platform.version}</version>
+				<type>jar</type>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>3.0.1</version>
+				<scope>provided</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -225,6 +250,9 @@
 	<profiles>
 		<profile>
 			<id>IT</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<build>
 				<plugins>
 					<plugin>
